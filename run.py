@@ -44,6 +44,12 @@ def validate_data(values):
 
     return True
 
+    def update_worksheet(data, worksheet):
+     print(f"Updating {worksheet} worksheet...\n")
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(data)
+    print(f"{worksheet} worksheet updated successfully\n")
+
 
 def update_sales_worksheet(data):
     print("Updating sales worksheet...\n")
